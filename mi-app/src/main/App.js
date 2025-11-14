@@ -140,7 +140,7 @@ class App extends React.Component {
             categoria: nueva_categoria,
             nivel_urgencia: nuevo_nivelUrgencia,
             fecha_registro: fechaFormateada,
-            estado: nuevo_estado,
+            estado: "Abierta",
             ubicacion: nueva_ubicacion
         }
         /**Metodo usado para modificar la propiedad de la clase */
