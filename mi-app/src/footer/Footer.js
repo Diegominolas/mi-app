@@ -1,11 +1,10 @@
 import React from "react";
-import './Footer.css';
 
 class Footer extends React.Component{
     render(){
         return(
-            <div id="footer">
-                <h3>Lorem Ipsum</h3>
+            <div id="footer" className="bg-dark text-center text-white p-1">
+                <h3>Copyright © 2025 Diego García Valbuena</h3>
             </div>
         );
     }

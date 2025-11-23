@@ -1,5 +1,5 @@
 import React from "react";
-import './Form.css';
+import "./Form.css";
 
 function Form(props) {
 
@@ -18,31 +18,31 @@ function Form(props) {
     };
 
     return (
-        <>
-            <h2>Registrar incidencia</h2>
+        <div className="card p-4 bg-light">
+            <h3 className="card-title mb-4 text-center">Registrar incidencia</h3>
             <form onSubmit={envioFormulario}>
                 {/**Usuario */}
                 <div className="elemento-form">
-                    <label>Id usuario </label>
-                    <input type="text" name="id_usuario" placeholder="Nombre de usuario" required></input>
-                    <br /><br />
+                    <label className="mb-1 form-label">Id usuario </label>
+                    <input className="mb-1 form-control" type="text" name="id_usuario" placeholder="Nombre de usuario" required></input>
+                    <br />
                 </div>
                 {/**Titulo incidencia */}
                 <div className="elemento-form">
-                    <label>Titulo incidencia </label>
-                    <input type="text" name="titulo" placeholder="Introduce el titulo de la incidencia" required></input>
-                    <br /><br />
+                    <label className="mb-1 form-label">Titulo incidencia </label>
+                    <input className="mb-1 form-control" type="text" name="titulo" placeholder="Introduce el titulo de la incidencia" required></input>
+                    <br />
                 </div>
                 {/**Descripción de incidencia */}
                 <div className="elemento-form">
-                    <label>Descripción de la incidencia </label>
-                    <textarea name="descripcion" placeholder="Describa la incidencia" required></textarea>
-                    <br /><br />
+                    <label className="mb-1 form-label">Descripción de la incidencia </label>
+                    <textarea className="mb-1 form-control" name="descripcion" placeholder="Describa la incidencia" required></textarea>
+                    <br />
                 </div>
                 {/**Categoria */}
                 <div className="elemento-form">
-                    <label>Categoria de la incidencia </label>
-                    <select name="tipoCategoria" required>
+                    <label className="mb-1 form-label">Categoria de la incidencia </label>
+                    <select className="mb-1 form-control" name="tipoCategoria" required>
                         <option value="">Seleccionar...</option>
                         <option value="hardware">Hardware</option>
                         <option value="software">Software</option>
@@ -50,30 +50,30 @@ function Form(props) {
                         <option value="usuarios">Usuarios</option>
                         <option value="infraestructura">Infraestructura</option>
                     </select>
-                    <br /><br />
+                    <br />
                 </div>
                 {/**Nivel de urgencia */}
                 <div className="elemento-form">
-                    <label>Nivel de urgencia </label>
-                    <select name="nivelUrgencia" required>
+                    <label className="mb-1 form-label">Nivel de urgencia </label>
+                    <select className="mb-1 form-control" name="nivelUrgencia" required>
                         <option value="">Seleccionar...</option>
                         <option>Alta</option>
                         <option>Media</option>
                         <option>Baja</option>
                     </select>
-                    <br /><br />
+                    <br />
                 </div>
                 {/**Ubicacion incidencia */}
                 <div className="elemento-form">
-                    <label>Ubicación de la incidencia </label>
-                    <input name="ubicacion" placeholder="Lugar de la incidencia" required></input>
-                    <br /><br />
+                    <label className="mb-1 form-label">Ubicación de la incidencia </label>
+                    <input className="mb-1 form-control" name="ubicacion" placeholder="Lugar de la incidencia" required></input>
+                    <br />
                 </div>
                 {/**Boton de registro */}
-                <button type="submit" className="element-form-button">Registrar</button>
+                <button className="btn btn-azulOscuro mx-auto d-grid" type="submit">Registrar</button>
                 <br />
             </form>
-        </>
+        </div>
     )
 }
 
