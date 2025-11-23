@@ -1,28 +1,41 @@
 import React from "react";
 
-function MiLista(props){  
+function MiLista(props) {
     //Generamos una condicion para poder identificar el estado del state
-    return(
-            <div>
-                <dl>
-                    {props.incidencias.map((i)=>(
+    return (
+            <table className="card p-4 table table-striped table-secondary table-hover align-middle shadow-sm">
+                <thead>
+                    <tr>
+                        <th className="text-center w-auto">Título</th>
+                        <th className="text-center">Número incidencia</th>
+                        <th className="text-center">Usuario</th>
+                        <th className="text-center">Descripción</th>
+                        <th className="text-center">Categoría</th>
+                        <th className="text-center">Nivel de urgencia</th>
+                        <th className="text-center">Fecha de notificación</th>
+                        <th className="text-center">Estado</th>
+                        <th className="text-center">Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {props.incidencias.map((i) => (
                         //Introducimos el atributo key para comprobar que los elementos de la lista no están repetidos
-                        <React.Fragment key={i.id_incidencia}>
-                            <dt><strong>Título:</strong>{i.titulo}</dt>
-                            <dd><strong>Número incidencia:</strong>{i.id_incidencia}</dd>
-                            <dd><strong>Usuario:</strong> {i.id_usuario}</dd>
-                            <dd><strong>Descripción:</strong> {i.descripcion}</dd>
-                            <dd><strong>Categoría:</strong> {i.categoria}</dd>
-                            <dd><strong>Nivel de urgencia:</strong> {i.nivel_urgencia}</dd>
-                            <dd><strong>Fecha de notificación:</strong> {i.fecha_registro}</dd>
-                            <dd><strong>Estado:</strong> {i.estado}</dd>
-                            <dd><strong>Ubicación:</strong> {i.ubicacion}</dd>
-                            <br/>
-                        </React.Fragment>
-                    ))}    
-                </dl>
-            </div>
-        );
+                        <tr key={i.id_incidencia}>
+                            {/**Cada propiedad es una fila td */}
+                            <td className="text-center">{i.titulo}</td>
+                            <td className="text-center">{i.id_incidencia}</td>
+                            <td className="text-center">{i.id_usuario}</td>
+                            <td className="text-center">{i.descripcion}</td>
+                            <td className="text-center">{i.categoria}</td>
+                            <td className="text-center">{i.nivel_urgencia}</td>
+                            <td className="text-center">{i.fecha_registro}</td>
+                            <td className="text-center">{i.estado}</td>
+                            <td className="text-center">{i.ubicacion}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+    );
 
-    }
+}
 export default MiLista;
