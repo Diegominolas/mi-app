@@ -23,8 +23,8 @@ function MiLista(props) {
                         <tr key={i.id_incidencia}>
                             {/**Cada propiedad es una fila td */}
                             <td className="text-center">{i.titulo}</td>
-                            <td className="text-center">{i.id_incidencia}</td>
-                            <td className="text-center">{i.id_usuario}</td>
+                            <td className="text-center">{i.id}</td>
+                            <td className="text-center">{i.usuario.email}</td>
                             <td className="text-center">{i.descripcion}</td>
                             <td className="text-center">{i.categoria}</td>
                             <td className="text-center">{i.nivel_urgencia}</td>
